@@ -649,7 +649,7 @@ void unload_filament_withSensor()
     isFilamentLoaded = false; // filament unloaded
 }
 
-//! @brief Do 50.02 mm pulley push
+//! @brief Do 72.04 mm pulley push
 //!
 //! Load filament after confirmed by printer into the Bontech pulley gears so they can grab them.
 //! Stop when 'A' received
@@ -661,7 +661,7 @@ void unload_filament_withSensor()
 //! @n SPR = FSPR * mres steps per revolution
 //! @n T1 = 2600 us      step period first segment
 //! @n v1 = (1 / T1) / SPR * c = 19.02 mm/s  speed first segment
-//! @n s1 =   1011    / SPR * c = 50.02 mm    distance first segment
+//! @n s1 =   1456    / SPR * c = 72.04 mm    distance first segment
 void load_filament_inPrinter()
 {
 
@@ -674,7 +674,7 @@ void load_filament_inPrinter()
 
     unsigned long delay = fist_segment_delay;
 
-    for (int i = 0; i < 1011; i++)
+    for (int i = 0; i < 1456; i++)
     {
         delayMicroseconds(delay);
         unsigned long now = micros();
